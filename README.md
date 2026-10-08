@@ -29,6 +29,11 @@
 - **IT-Großhandel & Supply Chain:** Hardware-Sourcing | Logistikprozesse | Lieferketten-Optimierung
 - **Systemintegration & Telco:** Netzwerkinfrastruktur | IP-Telefonie | Genesys GCP (Genesys Cloud CX)
 
+---
+
+### 📬 Kontakt & Links
+- **GitHub:** (https://m-plum.github.io/M-Plum/)
+- **LinkedIn:** (https://de.linkedin.com/in/michael-plum-)
 ### 💻 Cloud & Frameworks
 
 <p align="left">
@@ -41,6 +46,4 @@
 
 ---
 
-### 📬 Kontakt & Links
-- **GitHub:** (https://m-plum.github.io/M-Plum/)
-- **LinkedIn:** (https://de.linkedin.com/in/michael-plum-)
+
