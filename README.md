@@ -32,7 +32,7 @@
 ---
 
 ### 📬 Kontakt & Links
-- **GitHub:** (https://m-plum.github.io/M-Plum/)
+- **GitHub:**  (https://m-plum.github.io/M-Plum/)
 - **LinkedIn:** (https://de.linkedin.com/in/michael-plum-)
 ### 💻 Cloud & Frameworks
 
