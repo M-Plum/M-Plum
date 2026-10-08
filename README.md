@@ -41,5 +41,5 @@
 ---
 
 ### 📬 Kontakt & Links
-- **GitHub:** [github.com/Michael-Plum]([(https://m-plum.github.io/M-Plum/))]
+- **GitHub:** [github.com/Michael-Plum](https://m-plum.github.io/M-Plum/)
 - **GitHub:** [github.com/M-Plum](https://github.com/M-Plum)
