@@ -1,7 +1,7 @@
 # Hi, ich bin Michael-Plum 👋
 
 ### Fachinformatiker für Systemintegration
-**IT-Management | Supply Chain Expertise | Multi-Cloud & Telco**
+**IT-Management | Supply Chain Expertise | Multi-Cloud & Telekommunication**
 
 ---
 
@@ -37,8 +37,20 @@
   <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="45" height="45"/>
   <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="45" height="45"/>
   <img src="https://www.vectorlogo.zone/logos/linux/linux-icon.svg" alt="linux" width="45" height="45"/>
+  <img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" width="48" height="48" />
 </p>
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=FF9900)
 
+<p align="left">
+  <!-- AWS Hauptlogo -->
+  <img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" title="Amazon Web Services" width="48" height="48"/> &nbsp;&nbsp;
+  <!-- Google Cloud Hauptlogo -->
+  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="GCP" title="Google Cloud Platform" width="48" height="48"/> &nbsp;&nbsp;
+  <!-- Azure Hauptlogo -->
+  <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="Azure" title="Microsoft Azure" width="48" height="48"/> &nbsp;&nbsp;
+  <!-- Genesys -->
+  <img src="https://cdn.simpleicons.org/genesys/FF4F00" alt="Genesys" title="Genesys Cloud CX" width="48" height="48"/>
+</p>
 ---
 
 ### 📬 Kontakt & Links
