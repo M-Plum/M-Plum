@@ -1,6 +1,6 @@
 # Hi, ich bin Michael-Plum 👋
 
-### Angehender Fachinformatiker für Systemintegration (FiSi)
+### Fachinformatiker für Systemintegration
 **IT-Management | Supply Chain Expertise | Multi-Cloud & Telco**
 
 ---
