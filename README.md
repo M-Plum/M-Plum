@@ -29,7 +29,17 @@
 - **IT-Großhandel & Supply Chain:** Hardware-Sourcing | Logistikprozesse | Lieferketten-Optimierung
 - **Systemintegration & Telco:** Netzwerkinfrastruktur | IP-Telefonie | Genesys GCP (Genesys Cloud CX)
 
+### 💻 Cloud & Frameworks
+
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-non-colored.svg" alt="aws" width="45" height="45"/>
+  <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="45" height="45"/>
+  <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="45" height="45"/>
+  <img src="https://www.vectorlogo.zone/logos/linux/linux-icon.svg" alt="linux" width="45" height="45"/>
+</p>
+
 ---
 
 ### 📬 Kontakt & Links
 - **GitHub:** [github.com/Michael-Plum]([(https://m-plum.github.io/M-Plum/))]
+- **GitHub:** [github.com/M-Plum](https://github.com/M-Plum)
