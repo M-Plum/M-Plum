@@ -1,275 +1,204 @@
 <!DOCTYPE html>
-<html lang="de" class="dark scroll-smooth">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-Plum | IT-Management, Cloud & Systemintegration</title>
-    
-    <!-- Google Fonts: Inter (Uni-Schrift) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        plum: {
-                            950: '#100618',
-                            900: '#180924',
-                            800: '#260e38',
-                            700: '#381452',
-                        },
-                        cyanAccent: '#22d3ee',
-                        blueAccent: '#38bdf8',
-                        iceBlue: '#e0f2fe'
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael-Plum | IT-Management, Supply Chain & Multi-Cloud</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #12081c;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #100618;
-            color: #e0f2fe;
-            overflow-x: hidden;
-        }
+    /* Wabbelnder Pflaumen-Hintergrund */
+    .plum-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: radial-gradient(circle at 20% 30%, #2a0e3a 0%, #12081c 60%),
+                  radial-gradient(circle at 80% 70%, #1f0d30 0%, #0d0514 70%);
+    }
 
-        /* Sanft wechselnder Wabbel-Effekt (Animated Liquid Gradient Canvas) */
-        .plum-blob {
-            position: absolute;
-            filter: blur(80px);
-            opacity: 0.55;
-            border-radius: 50%;
-            animation: floatWobble 16s ease-in-out infinite alternate;
-            will-change: transform;
-        }
+    .blob {
+      position: absolute;
+      filter: blur(80px);
+      opacity: 0.45;
+      border-radius: 50%;
+      animation: float 18s ease-in-out infinite alternate;
+    }
 
-        .blob-1 {
-            top: -10%;
-            left: -10%;
-            width: 55vw;
-            height: 55vw;
-            background: radial-gradient(circle, #381452 0%, #180924 70%, transparent 100%);
-            animation-duration: 18s;
-        }
+    .blob-1 {
+      top: -10%;
+      left: 10%;
+      width: 50vw;
+      height: 50vw;
+      background: linear-gradient(135deg, #4c1d95, #2e1065);
+      animation-duration: 22s;
+    }
 
-        .blob-2 {
-            bottom: -15%;
-            right: -10%;
-            width: 60vw;
-            height: 60vw;
-            background: radial-gradient(circle, #2a0b40 0%, #12051c 70%, transparent 100%);
-            animation-duration: 22s;
-            animation-delay: -5s;
-        }
+    .blob-2 {
+      bottom: -10%;
+      right: 5%;
+      width: 45vw;
+      height: 45vw;
+      background: linear-gradient(135deg, #3b0764, #1e1b4b);
+      animation-duration: 18s;
+      animation-delay: -5s;
+    }
 
-        .blob-3 {
-            top: 35%;
-            left: 25%;
-            width: 45vw;
-            height: 45vw;
-            background: radial-gradient(circle, #1e092d 0%, #0d0314 70%, transparent 100%);
-            animation-duration: 25s;
-            animation-delay: -10s;
-        }
+    .blob-3 {
+      top: 40%;
+      left: 35%;
+      width: 35vw;
+      height: 35vw;
+      background: linear-gradient(135deg, #581c87, #0284c7);
+      opacity: 0.25;
+      animation-duration: 25s;
+      animation-delay: -10s;
+    }
 
-        @keyframes floatWobble {
-            0% {
-                transform: translate(0px, 0px) scale(1) rotate(0deg);
-            }
-            33% {
-                transform: translate(40px, -50px) scale(1.1) rotate(6deg);
-            }
-            66% {
-                transform: translate(-30px, 30px) scale(0.95) rotate(-4deg);
-            }
-            100% {
-                transform: translate(20px, 40px) scale(1.05) rotate(3deg);
-            }
-        }
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      50% {
+        transform: translate(40px, 30px) scale(1.08) rotate(5deg);
+      }
+      100% {
+        transform: translate(-30px, 50px) scale(0.95) rotate(-5deg);
+      }
+    }
 
-        /* Dezentes Glassmorphism für Kacheln */
-        .glass-card {
-            background: rgba(24, 9, 36, 0.55);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(56, 189, 248, 0.12);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    /* Card Styling */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
 
-        .glass-card:hover {
-            border-color: rgba(34, 211, 238, 0.35);
-            box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.15);
-            transform: translateY(-2px);
-        }
-
-        /* Sanfter Textverlauf */
-        .text-gradient {
-            background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 50%, #22d3ee 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between relative selection:bg-cyan-500 selection:text-slate-900">
+<body class="min-h-screen flex flex-col justify-between p-6 md:p-12 relative">
 
-    <!-- Wabbel-Hintergrund Container -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="plum-blob blob-1"></div>
-        <div class="plum-blob blob-2"></div>
-        <div class="plum-blob blob-3"></div>
-        <!-- Subtile Rasternetz-Überlagerung für Tiefe -->
-        <div class="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03]"></div>
-    </div>
+  <!-- Dynamic Wabbel Background -->
+  <div class="plum-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
 
-    <div class="relative z-10 flex-grow flex flex-col">
-        <!-- Header / Navigation -->
-        <header class="w-full max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-600/20 border border-cyan-500/30 flex items-center justify-center text-cyan-300 font-bold text-lg shadow-sm">
-                    MP
-                </div>
-                <span class="font-semibold text-lg tracking-tight text-slate-100">M-Plum</span>
-            </div>
-            
-            <a href="https://github.com/M-Plum" target="_blank" rel="noopener noreferrer" 
-               class="glass-card px-4 py-2 rounded-xl text-sm font-medium text-cyan-300 hover:text-white flex items-center space-x-2 transition-all">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-                <span>GitHub Profil</span>
-            </a>
-        </header>
+  <div class="max-w-5xl mx-auto w-full flex-grow flex flex-col justify-between z-10">
+    
+    <!-- Header -->
+    <header class="flex justify-between items-center mb-12">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-cyan-950/80 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold">
+          MP
+        </div>
+        <span class="text-xl font-bold tracking-tight text-slate-100">Michael-Plum</span>
+      </div>
 
-        <!-- Main Content Container -->
-        <main class="w-full max-w-6xl mx-auto px-6 py-6 md:py-12 flex-grow flex flex-col justify-center">
-            
-            <!-- Hero / Profil-Überschrift -->
-            <div class="mb-12 md:mb-16 max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-cyan-950/60 text-cyan-300 border border-cyan-500/30 mb-6">
-                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                    Angehender Fachinformatiker Systemintegration (FiSi)
-                </div>
-                
-                <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight text-slate-100">
-                    IT-Management, Supply Chain & <span class="text-gradient">Multi-Cloud Infrastrukturen</span>
-                </h1>
-                
-                <p class="text-slate-300 text-base md:text-lg leading-relaxed font-normal">
-                    Fundierte Praxis aus jahrelanger Erfahrung im Computergroßhandel und der gesamten Supply Chain, ergänzt durch zertifiziertes IT-Management sowie spezialisiertes Wissen in AWS, Google Cloud und Microsoft Azure.
-                </p>
-            </div>
+      <!-- GitHub Button -->
+      <a href="https://github.com/M-Plum" target="_blank" rel="noopener noreferrer" 
+         class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card hover:bg-white/10 text-cyan-400 border border-cyan-500/30 text-sm font-medium transition-all">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub Profil</span>
+      </a>
+    </header>
 
-            <!-- Grid der 4 Kern-Inhalte -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <!-- Kachel 1: IT-Management & Agilität -->
-                <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-300 mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-semibold text-slate-100 mb-3">IT-Management & Agilität</h2>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Strukturierte Methodenkompetenz zur Steuerung komplexer IT-Projekte, Prozessoptimierung und agiler Teamorganisation.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">PRINCE2</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">Scrum</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">ITIL v4</span>
-                    </div>
-                </div>
+    <!-- Main Content Grid -->
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start my-auto py-8">
+      
+      <!-- Text & Credentials Column (Spans 2 columns) -->
+      <div class="md:col-span-2 space-y-6">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/60 text-cyan-400 border border-cyan-500/30 mb-4">
+            Fachinformatiker Systemintegration               </span>
+          <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            IT-Management, Supply Chain & Multi-Cloud Infrastrukturen
+          </h1>
+        </div>
 
-                <!-- Kachel 2: Multi-Cloud Expertise -->
-                <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 15a4 4 0 004 4h9a5 5 0 001.09-9.88 7 7 0 00-13.39-1.9A5.002 5.002 0 003 15z"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-semibold text-slate-100 mb-3">Multi-Cloud Architektur</h2>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Fortbildung und Spezialisierung auf führende Hyperscaler für hybride und skalierbare Cloud-Lösungen.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">AWS</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">Google Cloud (GCP)</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">Microsoft Azure</span>
-                    </div>
-                </div>
+        <p class="text-slate-300 text-lg leading-relaxed font-light">
+          Langjährige Erfahrung im IT-Management und im Computergroßhandel. 
+          Fundiertes Wissen der gesamten Supply Chain kombiniert mit praxisnahen 
+          Fortbildungen in Multi-Cloud-Architekturen und IP-Telefonietechniken.
+        </p>
 
-                <!-- Kachel 3: IT Supply Chain & Großhandel -->
-                <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-300 mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-semibold text-slate-100 mb-3">IT Supply Chain & Großhandel</h2>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Langjährige Praxis im Computergroßhandel. Tiefes Verständnis für Hardware-Lebenszyklen, Beschaffung und logistische Prozesse.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">Großhandel</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">Supply Chain Logistics</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-cyan-300 border border-cyan-500/20">Hardware Management</span>
-                    </div>
-                </div>
+        <!-- Skill Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          
+          <!-- Card 1 -->
+          <div class="glass-card p-5 rounded-2xl">
+            <div class="text-cyan-400 font-semibold mb-1">IT-Management & Agilität</div>
+            <p class="text-sm text-slate-400">Prince2, Scrum, ITIL v4, Lifecycle Management</p>
+          </div>
 
-                <!-- Kachel 4: Systemintegration & Telephonie -->
-                <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-semibold text-slate-100 mb-3">Systemintegration & Infrastruktur</h2>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Abrundung des Profils durch die FiSi-Qualifikation sowie fundiertes Know-how in moderner IP-Telefonie und Netzwerkinfrastruktur.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">Fachinformatiker SI</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">Genesys GCP (Cloud CX)</span>
-                        <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-900/80 text-blue-300 border border-blue-500/20">IP-Telefonie</span>
-                    </div>
-                </div>
+          <!-- Card 2 -->
+          <div class="glass-card p-5 rounded-2xl">
+            <div class="text-cyan-400 font-semibold mb-1">Multi-Cloud</div>
+            <p class="text-sm text-slate-400">AWS, Google Cloud Platform (GCP), Microsoft Azure</p>
+          </div>
 
-            </div>
-        </main>
+          <!-- Card 3 -->
+          <div class="glass-card p-5 rounded-2xl">
+            <div class="text-cyan-400 font-semibold mb-1">IT Supply Chain</div>
+            <p class="text-sm text-slate-400">Computergroßhandel, Hardware, Logistik-Prozesse</p>
+          </div>
 
-        <!-- Footer -->
-        <footer class="w-full max-w-6xl mx-auto px-6 py-8 mt-12 border-t border-slate-800/60 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
-            <div>
-                © <span id="year"></span> M-Plum • Systemintegration & IT-Management
-            </div>
-            <a href="https://github.com/M-Plum" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition-colors">
-                github.com/M-Plum
-            </a>
-        </footer>
-    </div>
+          <!-- Card 4 -->
+          <div class="glass-card p-5 rounded-2xl">
+            <div class="text-cyan-400 font-semibold mb-1">Systemintegration & Telco</div>
+            <p class="text-sm text-slate-400">FiSi, IP-Telefonie, Genesys GCP (Genesys Cloud CX)</p>
+          </div>
 
-    <script>
-        // Set dynamic current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile Picture (Below Github Button, Application/Bewerbung style) -->
+      <div class="flex flex-col items-center md:items-end justify-start pt-2">
+        <div class="relative group">
+          <!-- Subtle Glow Ring behind Image -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+          
+          <!-- Profile Picture -->
+          <img 
+            src="https://github.com/M-Plum.png" 
+            alt="M-Plum Profilbild" 
+            class="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-2 border-cyan-400/60 shadow-2xl"
+            onerror="this.src='https://via.placeholder.com/200?text=MP';"
+          />
+        </div>
+        <span class="text-xs text-slate-400 mt-3 font-medium tracking-wide uppercase">Michael-Plum</span>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-12 pb-4 text-center md:text-left text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+      <p>© Michael-Plum. Alle Rechte vorbehalten.</p>
+      <p class="mt-2 md:mt-0 text-slate-400">Fachinformatiker Systemintegration i.A.</p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
